@@ -1,0 +1,57 @@
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 50;
+   // .header__container
+   &__container {
+      padding: 36px 15px;
+      display: flex;
+      align-items: center;
+      gap: 132px;
+   }
+   // .header__logo
+   &__logo {
+      font-size: 24px;
+      line-height: 1.33;
+      font-weight: 700;
+      color: $secondaryTextColor;
+   }
+   // .header__menu
+   &__menu {
+   }
+   // .header__list
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 21px;
+   }
+   // .header__item
+   &__item {
+   }
+   // .header__link
+   &__link {
+      position: relative;
+      padding: 5px;
+      transition: color 0.3s;
+      &::after {
+         content: "";
+         position: absolute;
+         top: 100%;
+         left: 0;
+         width: 0;
+         height: 2px;
+         background-color: $secondaryTextColor;
+         transition: width 0.3s;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $secondaryTextColor;
+            &::after {
+               width: 100%;
+            }
+         }
+      }
+   }
+}

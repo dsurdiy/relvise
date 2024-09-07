@@ -1,0 +1,26 @@
+// =============================================================================================================
+
+.top {
+   text-align: center;
+   // .top__title
+   &__title {
+      font-size: 40px;
+      font-weight: 700;
+      color: $secondaryTextColor;
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+      @media (max-width: $tablet) {
+         font-size: 35px;
+      }
+      @media (max-width: $mobile) {
+         font-size: 28px;
+         line-height: 1.2;
+      }
+   }
+   // .top__text
+   &__text {
+      max-width: 511px;
+      margin: 0 auto;
+   }
+}
