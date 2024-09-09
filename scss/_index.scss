@@ -1,20 +1,51 @@
+// =============================================================================================================
+
+.page {
+   // .page__hero
+   &__hero {
+   }
+}
+
+// =============================================================================================================
+
 .hero {
-   background-image: url(../img/hero-bg.webp);
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
+   position: relative;
+   @media (max-width: $tablet) {
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         width: 100%;
+         background-color: #fff;
+         opacity: 0.4;
+         @media (max-width: $mobileSmall) {
+            opacity: 0.8;
+         }
+      }
+   }
    // .hero__container
    &__container {
+      position: relative;
+      z-index: 2;
    }
    // .hero__content
    &__content {
       min-height: 793px;
       max-width: 410px;
-      padding: 120px 0;
+      padding-block: 120px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       row-gap: 35px;
+      @media (max-width: $mobileSmall) {
+         min-height: 600px;
+         max-width: 100%;
+         padding-block: 65px;
+         text-align: center;
+         row-gap: 25px;
+      }
    }
    // .hero__title
    &__title {
@@ -22,15 +53,35 @@
       font-weight: 800;
       color: $secondaryTextColor;
       line-height: 1.38;
+      @media (max-width: $mobile) {
+         font-size: 52px;
+         line-height: 1.2;
+      }
+      @media (max-width: $mobileSmall) {
+         font-size: 45px;
+      }
+      @media (max-width: 375px) {
+         font-size: 40px;
+      }
    }
    // .hero__text
    &__text {
       font-size: 20px;
+      @media (max-width: $tablet) {
+         color: $secondaryTextColor;
+      }
+      @media (max-width: $mobileSmall) {
+         font-size: 18px;
+      }
    }
    // .hero__actions
    &__actions {
       display: flex;
-      gap: 10px;
+      column-gap: 10px;
+      @media (max-width: $mobileSmall) {
+         flex-direction: column;
+         row-gap: 15px;
+      }
    }
    // .hero__link
    &__link {
@@ -55,4 +106,16 @@
          }
       }
    }
+   // .hero__image
+   &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: right;
+   }
 }
+
+// =============================================================================================================
