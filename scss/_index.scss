@@ -4,6 +4,9 @@
    // .page__hero
    &__hero {
    }
+   // .page__features
+   &__features {
+   }
 }
 
 // =============================================================================================================
@@ -115,6 +118,75 @@
       width: 100%;
       object-fit: cover;
       object-position: right;
+   }
+}
+
+// =============================================================================================================
+
+.features {
+   position: relative;
+   margin-top: -110px;
+   padding-bottom: 40px;
+   @media (max-width: $mobileSmall) {
+      margin-top: -40px;
+      padding-bottom: 30px;
+   }
+   // .features__container
+   &__container {
+   }
+   // .features__list
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      @media (max-width: $mobile) {
+         gap: 15px;
+      }
+   }
+   // .features__item
+   &__item {
+      flex: 1 1 328px;
+      padding: 35px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 13px 19px 0 rgba(0, 0, 0, 0.07);
+      background-color: #fff;
+      &--text-white {
+         background-color: $secondaryAccentColor;
+         color: #fff;
+      }
+      @media (max-width: $mobile) {
+         text-align: center;
+         padding: 18px 20px;
+         gap: 5px;
+      }
+   }
+   // .features__image
+   &__image {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      @media (max-width: $mobile) {
+         margin: 0 auto;
+      }
+   }
+   // .features__title
+   &__title {
+      font-size: 24px;
+      font-weight: 700;
+      color: $secondaryTextColor;
+      line-height: 1.34;
+      .features__item--text-white & {
+         color: inherit;
+      }
+      @media (max-width: $mobile) {
+         font-size: 20px;
+      }
+   }
+   // .features__text
+   &__text {
    }
 }
 
