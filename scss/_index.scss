@@ -7,6 +7,9 @@
    // .page__features
    &__features {
    }
+   // .page__designing
+   &__designing {
+   }
 }
 
 // =============================================================================================================
@@ -127,9 +130,11 @@
    position: relative;
    margin-top: -110px;
    padding-bottom: 40px;
+   @media (max-width: $mobile) {
+      padding-bottom: 30px;
+   }
    @media (max-width: $mobileSmall) {
       margin-top: -40px;
-      padding-bottom: 30px;
    }
    // .features__container
    &__container {
@@ -187,6 +192,88 @@
    }
    // .features__text
    &__text {
+   }
+}
+
+// =============================================================================================================
+
+.designing {
+   padding: 40px 0 80px;
+   @media (max-width: $tablet) {
+      padding: 40px 0;
+   }
+   @media (max-width: $mobile) {
+      padding: 30px 0;
+   }
+   // .designing__container
+   &__container {
+   }
+   // .designing__top
+   &__top {
+      &:not(:last-child) {
+         margin-bottom: 50px;
+         @media (max-width: $tablet) {
+            margin-bottom: 30px;
+         }
+      }
+   }
+   // .designing__items
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 30px;
+      justify-content: center;
+      @media (max-width: $pc) {
+         gap: 30px;
+      }
+      @media (max-width: $mobile) {
+         gap: 15px;
+      }
+   }
+   // .designing__item
+   &__item {
+      flex: 1 1 230px;
+      display: grid;
+      gap: 10px;
+      justify-items: center;
+      text-align: center;
+      padding: 30px 28px;
+      background-color: #fff;
+      font-weight: 700;
+      @media (max-width: $mobile) {
+         padding: 15px;
+         gap: 5px;
+      }
+      @media (max-width: $mobileSmall) {
+         &:nth-child(even) {
+            margin-left: auto;
+         }
+         &:nth-child(odd) {
+            margin-right: auto;
+         }
+      }
+   }
+   // .designing__icon
+   &__icon {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+   }
+   // .designing__num
+   &__num {
+      font-size: 40px;
+      color: $secondaryTextColor;
+      @media (max-width: $mobile) {
+         font-size: 30px;
+      }
+      @media (max-width: $mobileSmall) {
+         font-size: 25px;
+      }
+   }
+   // .designing__title
+   &__title {
+      font-size: 16px;
    }
 }
 
