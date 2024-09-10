@@ -10,6 +10,9 @@
    // .page__designing
    &__designing {
    }
+   // .page__practice
+   &__practice {
+   }
 }
 
 // =============================================================================================================
@@ -233,7 +236,7 @@
    }
    // .designing__item
    &__item {
-      flex: 1 1 230px;
+      flex: 0 1 230px;
       display: grid;
       gap: 10px;
       justify-items: center;
@@ -245,13 +248,8 @@
          padding: 15px;
          gap: 5px;
       }
-      @media (max-width: $mobileSmall) {
-         &:nth-child(even) {
-            margin-left: auto;
-         }
-         &:nth-child(odd) {
-            margin-right: auto;
-         }
+      @media (max-width: 600px) {
+         flex: 1 1 230px;
       }
    }
    // .designing__icon
@@ -274,6 +272,86 @@
    // .designing__title
    &__title {
       font-size: 16px;
+   }
+}
+
+// =============================================================================================================
+
+.practice {
+   padding: 80px 0;
+   @media (max-width: $pc) {
+      padding: 40px 0 80px;
+   }
+   @media (max-width: $tablet) {
+      padding: 40px 0;
+   }
+   @media (max-width: $mobile) {
+      padding: 30px 0;
+   }
+   // .practice__container
+   &__container {
+   }
+   // .practice__top
+   &__top {
+      &:not(:last-child) {
+         margin-bottom: 45px;
+      }
+   }
+   // .practice__items
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 40px;
+      row-gap: 30px;
+      justify-content: center;
+      @media (max-width: $pc) {
+         gap: 30px;
+      }
+      @media (max-width: $mobile) {
+         gap: 15px;
+      }
+   }
+   // .practice__item
+   &__item {
+      flex: 0 1 230px;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      @media (max-width: 600px) {
+         flex: 1 1 230px;
+      }
+      @media (max-width: 430px) {
+         margin: 0 -15px;
+      }
+   }
+   // .practice__content
+   &__content {
+      flex-grow: 1;
+      padding: 30px;
+      @media (max-width: $mobile) {
+         padding: 15px;
+      }
+   }
+   // .practice__title
+   &__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: $secondaryTextColor;
+      &:not(:last-child) {
+         margin-bottom: 15px;
+         @media (max-width: $mobile) {
+            margin-bottom: 8px;
+         }
+      }
+   }
+   // .practice__text
+   &__text {
+   }
+   // .practice__image
+   &__image {
+      max-width: 100%;
+      height: 138px;
+      object-fit: cover;
    }
 }
 
