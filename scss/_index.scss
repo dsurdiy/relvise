@@ -13,6 +13,9 @@
    // .page__practice
    &__practice {
    }
+   // .page__about
+   &__about {
+   }
 }
 
 // =============================================================================================================
@@ -352,6 +355,182 @@
       max-width: 100%;
       height: 138px;
       object-fit: cover;
+   }
+}
+
+// =============================================================================================================
+
+.about {
+   padding: 80px 0;
+   background-image: url("../img/about/bg.webp");
+   background-repeat: no-repeat;
+   background-size: cover;
+   @media (max-width: $tablet) {
+      padding: 50px 0;
+   }
+   @media (max-width: $mobile) {
+      padding: 30px 0;
+   }
+   // .about__container
+   &__container {
+   }
+   // .about__top
+   &__top {
+      &:not(:last-child) {
+         margin-bottom: 80px;
+         @media (max-width: $pc) {
+            margin-bottom: 50px;
+         }
+         @media (max-width: $tablet) {
+            margin-bottom: 35px;
+         }
+         @media (max-width: $mobileSmall) {
+            margin-bottom: 25px;
+         }
+      }
+   }
+   // .about__wrapper
+   &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 40px;
+      @media (max-width: $tablet) {
+         column-gap: 30px;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         row-gap: 30px;
+      }
+      @media (max-width: $mobileSmall) {
+         row-gap: 20px;
+      }
+   }
+   // .about__video
+   &__video {
+      position: relative;
+      flex: 0 1 600px;
+      aspect-ratio: 600 / 442;
+      overflow: hidden;
+      @media (max-width: $mobile) {
+         flex: 0 1 auto;
+         max-width: 450px;
+      }
+      @media (max-width: 430px) {
+         margin: 0 -15px;
+      }
+   }
+   // .about__image
+   &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+      @media (any-hover: hover) {
+         .about__video:hover & {
+            transform: scale(1.03);
+         }
+      }
+   }
+   // .about__button
+   &__button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      background-color: $secondaryAccentColor;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.5s;
+      &::after {
+         content: "";
+         width: 24px;
+         height: 29px;
+         background: url("../img/icons/play.svg") 0 0 / contain no-repeat;
+         @media (max-width: $tablet) {
+            width: 15px;
+            height: 18px;
+         }
+      }
+      @media (any-hover: hover) {
+         .about__video:hover & {
+            background-color: $accentColor;
+         }
+      }
+      @media (max-width: $tablet) {
+         width: 60px;
+         height: 60px;
+      }
+   }
+   // .about__content
+   &__content {
+      flex: 0 0 335px;
+      @media (max-width: $mobile) {
+         flex: 0 1 auto;
+      }
+   }
+   // .about__top-content
+   &__top-content {
+      text-align: left;
+      &:not(:last-child) {
+         margin-bottom: 50px;
+         @media (max-width: $tablet) {
+            margin-bottom: 25px;
+         }
+         @media (max-width: $mobileSmall) {
+            margin-bottom: 15px;
+         }
+      }
+      @media (max-width: $mobile) {
+         text-align: center;
+      }
+   }
+   // .about__list
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @media (max-width: $mobile) {
+         align-items: center;
+         gap: 15px;
+      }
+   }
+   // .about__item
+   &__item {
+      display: flex;
+      align-items: flex-start;
+      column-gap: 20px;
+      &::before {
+         width: 32px;
+         height: 32px;
+         object-fit: contain;
+      }
+      &:nth-child(odd)::before {
+         content: url("../img/icons/people.svg");
+      }
+      &:nth-child(even):before {
+         content: url("../img/icons/speed.svg");
+      }
+   }
+   // .about__box
+   &__box {
+   }
+   // .about__title
+   &__title {
+      font-size: 16px;
+      font-weight: 700;
+      color: $secondaryTextColor;
+      &:not(:last-child) {
+         margin-bottom: 5px;
+      }
+   }
+   // .about__text
+   &__text {
+      font-weight: 600;
    }
 }
 
