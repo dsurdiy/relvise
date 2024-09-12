@@ -16,6 +16,12 @@
    // .page__about
    &__about {
    }
+   // .page__clients
+   &__clients {
+   }
+   // .page__subscribe
+   &__subscribe {
+   }
 }
 
 // =============================================================================================================
@@ -531,6 +537,157 @@
    // .about__text
    &__text {
       font-weight: 600;
+   }
+}
+
+// =============================================================================================================
+
+.clients {
+   padding: 115px 0;
+   @media (max-width: $pc) {
+      padding: 80px 0;
+   }
+   @media (max-width: $tablet) {
+      padding: 60px 0;
+   }
+   @media (max-width: $mobile) {
+      padding: 40px 0;
+   }
+   @media (max-width: $mobileSmall) {
+      padding: 30px 0;
+   }
+   // .clients__container
+   &__container {
+   }
+   // .clients__list
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      @media (max-width: $mobile) {
+         flex-wrap: wrap;
+         justify-content: center;
+      }
+   }
+   // .clients__item
+   &__item {
+      flex: 0 1 151px;
+      text-align: center;
+      @media (max-width: $mobileSmall) {
+         flex: 0 1 100px;
+      }
+   }
+   // .clients__image
+   &__image {
+      max-width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+}
+
+// =============================================================================================================
+
+.subscribe {
+   padding: 20px 0;
+   background: linear-gradient(0deg, rgba(37, 43, 66, 1) 50%, rgba(250, 250, 250, 1) 50%);
+   // .subscribe__container
+   &__container {
+      @media (max-width: $mobile) {
+         margin: 0 -15px;
+      }
+   }
+   // .subscribe__content
+   &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 50px;
+      max-width: 986px;
+      margin: 0 auto;
+      padding: 30px 40px 30px 50px;
+      background-color: #17213c;
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         row-gap: 25px;
+      }
+      @media (max-width: $mobile) {
+         padding: 30px 10px;
+      }
+      @media (max-width: $mobileSmall) {
+         row-gap: 15px;
+      }
+   }
+   // .subscribe__title
+   &__title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      @media (max-width: $tablet) {
+         text-align: center;
+      }
+      @media (max-width: $mobileSmall) {
+         font-size: 20px;
+      }
+   }
+   // .subscribe__form
+   &__form {
+      position: relative;
+      flex: 0 0 450px;
+      display: flex;
+      @media (max-width: $tablet) {
+         flex: 0 0 auto;
+         width: 70%;
+      }
+      @media (max-width: 600px) {
+         width: 100%;
+      }
+      @media (max-width: $mobileSmall) {
+         flex-direction: column;
+         row-gap: 5px;
+      }
+   }
+   // .subscribe__input
+   &__input {
+      width: 100%;
+      min-height: 58px;
+      padding: 15px 135px 15px 20px;
+      border: 1px solid #e6e6e6;
+      border-radius: 5px;
+      font-weight: 600;
+      &::placeholder {
+         font-weight: 400;
+      }
+      @media (max-width: $mobileSmall) {
+         padding: 15px;
+      }
+   }
+   // .subscribe__button
+   &__button {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      padding: 14px 22.5px;
+      background-color: $accentColor;
+      color: #fff;
+      font-weight: 400;
+      line-height: 2;
+      border-left: 1px solid #e6e6e6;
+      border-radius: 0 5px 5px 0;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration-color: inherit;
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         position: relative;
+         border-radius: 5px;
+         border-left: none;
+         font-size: 16px;
+      }
    }
 }
 
