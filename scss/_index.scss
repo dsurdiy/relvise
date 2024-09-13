@@ -25,6 +25,9 @@
    // .page__contact
    &__contact {
    }
+   // .page__block-contact
+   &__block-contact {
+   }
 }
 
 // =============================================================================================================
@@ -836,6 +839,66 @@
             color: #fff;
             border-color: $accentColor;
          }
+      }
+   }
+}
+
+// =============================================================================================================
+
+.block-contact {
+   padding: 40px 0;
+   background-color: #fff;
+   @media (max-width: $mobileSmall) {
+      padding: 30px 0;
+   }
+   // .block-contact__container
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+      @media (max-width: 600px) {
+         flex-direction: column;
+         align-items: center;
+         gap: 25px;
+      }
+   }
+   // .block-contact__top
+   &__top {
+      text-align: left;
+      .top__title {
+         font-size: 24px;
+         @media (max-width: $mobileSmall) {
+            font-size: 22px;
+         }
+      }
+      .top__text {
+         margin: 0;
+      }
+      @media (max-width: 600px) {
+         text-align: center;
+      }
+   }
+   // .block-contact__link
+   &__link {
+      flex-shrink: 0;
+      padding: 14px 40px;
+      background-color: $accentColor;
+      color: #fff;
+      font-weight: 700;
+      line-height: 2;
+      border-radius: 5px;
+      border: 1px solid $accentColor;
+      transition: all 0.3s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: $accentColor;
+            background-color: #fff;
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         width: 100%;
+         text-align: center;
       }
    }
 }
