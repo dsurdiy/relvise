@@ -110,8 +110,10 @@
 
 .social {
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
-   gap: 20px;
+   column-gap: 20px;
+   row-gap: 7px;
    // .social__item
    &__item {
    }
